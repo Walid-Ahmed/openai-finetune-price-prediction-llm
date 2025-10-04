@@ -9,7 +9,7 @@ Includes **data preparation**, **fine-tuning**, **cost estimation**, **monitorin
 
 Scatter plot comparing **actual vs predicted prices** (100 random samples):  
 
-![Actual vs Predicted Prices](Figure_1.png)
+![Actual vs Predicted Prices](actual_vs_predicted.png)
 
 - The red dashed line shows **perfect predictions**.  
 - Most points are close, though expensive products are often under-predicted.  

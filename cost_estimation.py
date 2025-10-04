@@ -56,5 +56,5 @@ if __name__ == "__main__":
     print(f"Train tokens: {train_tokens:,}")
     print(f"Test tokens : {test_tokens:,}")
 
-    estimate_finetune_cost("train.jsonl", "test.jsonl", epochs=config.epochs, model="gpt-4o-mini")
+    estimate_finetune_cost("train.jsonl", "test.jsonl", epochs=config.epochs, model=config.model)
 

@@ -6,12 +6,12 @@ dataset = load_dataset("ed-donner/pricer-data")
 print(dataset)
 #peek(dataset, "train", n=5, random=True)
 import config
-
+from cost_estimation import estimate_finetune_cost
 from config import epochs
 
-# Downsample the train split to 100k rows
+# Downsample the train if needed
 num_train_records=config.num_train_records
-dataset["train"] = dataset["train"].shuffle(seed=42).select(range(num_sample))
+dataset["train"] = dataset["train"].shuffle(seed=42).select(range(num_train_records))
 
 
 train_val = dataset["train"].train_test_split(test_size=0.1, seed=42)

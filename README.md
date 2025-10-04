@@ -190,6 +190,32 @@ Prints **MAE, RMSE**, and generates the scatter plot shown above.
 
 ---
 
+## 📑 Sample Training Record
+
+Each record in the training/validation JSONL follows the **ChatML-style conversation format**.  
+Here’s one full example (also available in [`sample.jsonl`](sample.jsonl)):
+
+```json
+{
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are a helpful assistant that predicts product prices. Read the product description and estimate the price to the nearest whole dollar. Format your response exactly as: PRICE: <number>."
+    },
+    {
+      "role": "user",
+      "content": "How much does this cost to the nearest dollar? Delphi FG0166 Fuel Pump Module Delphi brings 80 years of OE Heritage into each Delphi pump, ensuring quality and fitment for each Delphi part. Part is validated, tested and matched to the right vehicle application Delphi brings 80 years of OE Heritage into each Delphi assembly, ensuring quality and fitment for each Delphi part Always be sure to check and clean fuel tank to avoid unnecessary returns Rigorous OE-testing ensures the pump can withstand extreme temperatures Brand Delphi, Fit Type Vehicle Specific Fit, Dimensions LxWxH 19.7 x 7.7 x 5.1 inches, Weight 2.2 Pounds, Auto Part Position Unknown, Operation Mode Mechanical, Manufacturer Delphi, Model FUEL PUMP, Dimensions 19.7"
+    },
+    {
+      "role": "assistant",
+      "content": "PRICE: 227"
+    }
+  ]
+}
+```
+
+---
+
 ## 📊 Project Files
 
 - `config.py` → Training config (model, epochs, system message).  
@@ -202,6 +228,7 @@ Prints **MAE, RMSE**, and generates the scatter plot shown above.
 - `checkJobStatus.py` → Quick fine-tune job status.  
 - `inference.py` → Run inference with fine-tuned model.  
 - `evaluate_random.py` → Evaluate performance on test set.  
+- `sample.jsonl` → A small subset of records with full training format.  
 
 ---
 
